@@ -1,12 +1,15 @@
 import React from 'react';
+import Header from '../header/header';
+import Welcome from '../welcome/welcome';
 import './app.css';
 
-function App() {
+const App = () => {
   return (
     <div className='App'>
-      <h1>Hello World</h1>
+      <Header />
+      <Welcome />
     </div>
   );
-}
+};
 
 export default App;
