@@ -1,11 +1,13 @@
 import React from 'react';
-import './header.css';
+import './header.scss';
 
 const Header = () => {
   return (
     <div className='header'>
       <h1 className='header-message'>Spending Tracker</h1>
-      <span>By: terran324</span>
+      <span>
+        By: <a href='https://github.com/terran324'>terran324</a>
+      </span>
     </div>
   );
 };

@@ -1,13 +1,15 @@
 import React from 'react';
 import Header from '../header/header';
-import Welcome from '../welcome/welcome';
-import './app.css';
+import Body from '../body/body';
+import Footer from '../footer/footer';
+import './app.scss';
 
 const App = () => {
   return (
     <div className='App'>
       <Header />
-      <Welcome />
+      <Body />
+      <Footer />
     </div>
   );
 };

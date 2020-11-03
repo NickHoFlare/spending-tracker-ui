@@ -1,0 +1,15 @@
+.footer {
+  background-color: #282c34;
+  min-height: 5rem;
+  color: white;
+  bottom: 0;
+  position: fixed;
+  width: 100%;
+}
+
+.footer-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 1rem 3rem 1rem;
+}
