@@ -1,0 +1,16 @@
+.navbar {
+  background-color: orange;
+  color: black;
+  width: 100%;
+
+  .navbar__content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style-type: none;
+
+    li {
+      padding-right: 2rem;
+    }
+  }
+}
