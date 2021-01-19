@@ -1,5 +1,5 @@
 .navbar {
-  background-color: orange;
+  background-color: maroon;
   color: black;
   width: 100%;
 
@@ -8,9 +8,19 @@
     justify-content: center;
     align-items: center;
     list-style-type: none;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
 
     li {
       margin-right: 2rem;
     }
   }
+}
+
+.navbar-item {
+  color:white;
+}
+
+.is-active {
+  color:orange;
 }
