@@ -1,5 +1,5 @@
 .navbar {
-  background-color: maroon;
+  background-color: gray;
   color: black;
   width: 100%;
 
@@ -18,9 +18,14 @@
 }
 
 .navbar-item {
-  color:white;
+  color:black;
 }
 
 .is-active {
   color:orange;
+}
+
+a:hover {
+  color: white;
+  text-decoration: none;
 }
