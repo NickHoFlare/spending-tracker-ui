@@ -1,5 +1,26 @@
+// TODO: MAke Responsive
 .welcome-jumbotron {
-  padding: 2rem 3rem;
+  padding: 2rem 15rem 2rem 3rem;
   margin: 2rem;
   width: auto;
+}
+
+.right {
+  padding: 2rem 3rem 2rem 15rem;
+}
+
+@media screen and (max-width: 1024px) {
+  img.responsive {
+    width: 4.5rem;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  img.responsive {
+    width: 9.5rem;
+  }
+}
+
+img.responsive {
+  height: auto;
 }
