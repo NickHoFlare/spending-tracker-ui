@@ -1,7 +1,7 @@
 import React from 'react';
 import { Jumbotron } from 'react-bootstrap';
-import cash from '../../../../assets/cash.jpg'
-import stonks from '../../../../assets/stonks.png'
+import cash from '../../../assets/cash.jpg'
+import stonks from '../../../assets/stonks.png'
 import './welcome.scss';
 
 const Welcome = () => {
