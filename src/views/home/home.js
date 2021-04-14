@@ -1,5 +1,4 @@
 import React, {useState} from 'react';
-import Welcome from './welcome/welcome';
 import { cash, stonks, logo } from '../../assets';
 import Carousel from 'react-bootstrap/Carousel';
 import './home.scss';
