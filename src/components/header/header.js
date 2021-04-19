@@ -3,7 +3,8 @@ import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
 import { Link } from 'react-router-dom';
 import logo from '../../assets/logo.png';
-//import Navbar from './navbar/navbar';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faKey } from '@fortawesome/free-solid-svg-icons'
 import './header.scss';
 
 const Header = () => {
@@ -21,12 +22,12 @@ const Header = () => {
       </Navbar.Brand>
       <Nav className="mr-auto">
         <Nav.Link as={Link} to="/" >Home</Nav.Link>
-        <Nav.Link as={Link} to="/profile" >Profile</Nav.Link>
+        <Nav.Link as={Link} to="/save" >Save</Nav.Link>
         <Nav.Link as={Link} to="/about" >About</Nav.Link>
       </Nav>
       <Navbar.Collapse className="justify-content-end">
         <Navbar.Text>
-          Made by <a href="https://github.com/terran324">Nicholas Ho</a>
+          <Link as={Link} to="/login"><FontAwesomeIcon icon={faKey} /> Login</Link>
         </Navbar.Text>
       </Navbar.Collapse>
     </Navbar>
