@@ -6,7 +6,7 @@ import './home.scss';
 const Home = () => {
   const [index, setIndex] = useState(0);
 
-  const handleSelect = (selectedIndex, e) => {
+  const handleSelect = (selectedIndex: number, e: any) => {
     setIndex(selectedIndex);
   };
 

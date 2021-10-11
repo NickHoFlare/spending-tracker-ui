@@ -27,7 +27,7 @@ const Header = () => {
       </Nav>
       <Navbar.Collapse className="justify-content-end">
         <Navbar.Text>
-          <Link as={Link} to="/login"><FontAwesomeIcon icon={faKey} /> Login</Link>
+          <Link to="/login"><FontAwesomeIcon icon={faKey} /> Login</Link>
         </Navbar.Text>
       </Navbar.Collapse>
     </Navbar>
