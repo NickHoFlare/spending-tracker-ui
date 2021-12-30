@@ -12,8 +12,9 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Compile frontend
-        working-directory: ./app
-        run: npm ci && npm run build
+        run: |
+          yarn install --immutable --immutable-cache --check-cache
+          yarn workspace app run build
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
           repoToken: '${{ secrets.GITHUB_TOKEN }}'
