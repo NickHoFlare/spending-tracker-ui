@@ -1,0 +1,9 @@
+{
+  "name": "spending-tracker",
+  "version": "1.0.0",
+  "repository": "https://github.com/terran324/spending-tracker.git",
+  "author": "Nicholas Ho <terran324@gmail.com>",
+  "license": "MIT",
+  "private": true,
+  "workspaces": ["api", "app"]
+}
