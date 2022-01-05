@@ -6,8 +6,9 @@
   "private": true,
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon ./src/index.ts",
-    "build": "tsc --project ./"
+    "start": "nodemon -r dotenv/config ./src/index.ts dotenv_config_path=../.env",
+    "build": "tsc --project ./",
+    "dotenv": "node -r dotenv/config ./src/index.ts dotenv_config_path=../.env"
   },
   "repository": {
     "type": "git",
@@ -20,6 +21,7 @@
   },
   "homepage": "https://github.com/terran324/spending-tracker#readme",
   "dependencies": {
+    "dotenv": "^10.0.0",
     "express": "^4.17.1",
     "firebase": "^9.5.0",
     "nodemon": "^2.0.15"
