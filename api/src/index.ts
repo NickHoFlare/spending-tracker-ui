@@ -1,26 +1,34 @@
 import express from 'express';
+import cors from 'cors';
 import firebaseConfig from './firestore/config';
 import { initializeApp } from 'firebase/app'
-import { getFirestore, doc, setDoc } from 'firebase/firestore';
+import { getFirestore, setDoc, collection, getDoc, doc } from 'firebase/firestore/lite';
 
 // Remember to update Cloud Firestore security rules before interacting with DB
-const firebaseApp = initializeApp(firebaseConfig);
-const firestore = getFirestore(firebaseApp);
+
 const app = express();
 const PORT = 8000;
 
-app.get('/', (req,res) => {
-  const testDoc = doc(firestore, 'test/test');
+const allowedOrigins = ['http://localhost:3000'];
+const options: cors.CorsOptions = {
+  origin: allowedOrigins
+}
+app.use(cors(options));
+
+const firebaseApp = initializeApp(firebaseConfig);
+const firestore = getFirestore(firebaseApp);
+
+app.get('/', async (req,res) => {
+  const docRef = doc(firestore, 'spendless', 'test');
+  const docSnap = await getDoc(docRef);
   
-  const docData = {
-    description: "Hello world!"
+  if (docSnap.exists()) {
+    res.send(docSnap.data());
+  } else {
+    res.send('no such document exists');
   }
-  setDoc(testDoc, docData);
-  
-  res.send('Express + TypeScript Server');
 });
 
 app.listen(PORT, () => {
   console.log(`⚡️[server]: Server is running at https://localhost:${PORT}`);
-  console.log(firebaseConfig);
 });
