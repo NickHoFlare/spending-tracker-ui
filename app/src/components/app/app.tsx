@@ -1,14 +1,14 @@
 import React from 'react';
 import Header from '../header/header';
-import Body from '../body/body';
+import Content from '../content/content';
 import Footer from '../footer/footer';
 import './app.scss';
 
 const App = () => {
   return (
-      <div className="app-background">
+      <div>
         <Header />
-        <Body />
+        <Content />
         <Footer />
       </div>
   );

@@ -10,6 +10,7 @@ const Home = () => {
     setIndex(selectedIndex);
   };
 
+  // TODO: Probably do away with the carousel
   return (
     <div className="mt-4">
       <Carousel activeIndex={index} onSelect={handleSelect}>

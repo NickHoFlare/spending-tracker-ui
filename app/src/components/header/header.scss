@@ -1,41 +1,41 @@
-.header {
+.navbar {
+  position: fixed;
+  height: 4rem;
+  width: 100%;
+  top: 0;
+  overflow: hidden;
   background-color: #282c34;
-  min-height: 10rem;
-  color: white;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
 }
 
-.header__banner {
-  background-color: #282c34;
-  min-height: 10rem;
-  color: white;
+.logo-title {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 1rem;
+  color: white;
 
-  .header__message {
-    font-size: 2rem;
-    text-align: center;
+  .logo {
+    height: 3rem;
+    margin-left: 1rem;
+    margin-right: 0.5rem;
   }
 
-  @media screen and (max-width: 1024px) {
-    img.responsive {
-      width: 4.5rem;
-    }
+  .title {
+    font-size: 2em;
+    margin: 0;
   }
+}
 
-  @media screen and (min-width: 1025px) {
-    img.responsive {
-      width: 9.5rem;
-    }
-  }
+.menu {
+  list-style-type: none;
+  margin: 0;
+  display: flex;
 
-  img.responsive {
-    height: auto;
+  .option {
+    margin-right: 1rem;
   }
+}
+
+.login {
+  margin-left: auto;
+  margin-right: 1rem;
 }
