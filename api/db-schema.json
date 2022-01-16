@@ -1,0 +1,50 @@
+// This file is intended as a representation of how data might be modelled on a (document-based) database.
+// Each separate JSON object represents a collection (root or sub-collection)
+
+// Profiles (root collection)
+{
+    "name": "String",
+    "totalSavings": "number", // Not really a net-worth, because we haven't accounted for other assets
+    "banks": "Bank[]",
+}
+
+// Banks (sub-collection)
+{
+    "name": "String",
+    "balance": "Number",
+    "accounts": "Account[]"
+}
+
+// Accounts (sub-collection)
+{
+    "type": "String", // Spending / Savings / loan / investment
+    "accountNumber": "String",
+    "balance": "Number",
+    "transactions": "Transaction[]"
+}
+
+// Transaction (sub-collection)
+// If transaction data is not available in CSV format, use https://www.npmjs.com/package/pdf2json 
+{
+    "description": "String",
+    "category": "String",
+    "nickname": "String",
+    "date": "DateTime",
+    "debit": "Number",
+    "credit": "Number"
+}
+
+// Reference Data (Root collection)
+{
+    "Banks": {
+        "Banks": [{
+            "name": "String",
+            "shortName": "String"
+        }]
+    },
+    "TransactionCategories": {
+        "Categories": [
+            "String"
+        ]
+    }
+}
