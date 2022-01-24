@@ -2,13 +2,13 @@
   "name": "api",
   "version": "1.0.0",
   "description": "API for the spending tracker app",
-  "main": "./src/index.ts",
+  "main": "./src/app.ts",
   "private": true,
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon -r dotenv/config ./src/index.ts dotenv_config_path=../.env",
+    "start": "nodemon -r dotenv/config ./src/app.ts dotenv_config_path=../.env",
     "build": "tsc --project ./",
-    "dotenv": "node -r dotenv/config ./src/index.ts dotenv_config_path=../.env"
+    "dotenv": "node -r dotenv/config ./src/app.ts dotenv_config_path=../.env"
   },
   "repository": {
     "type": "git",
